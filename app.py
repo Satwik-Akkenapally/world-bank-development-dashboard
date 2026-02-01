@@ -3,7 +3,8 @@ import pandas as pd
 import plotly.express as px
 
 # Load data
-df = pd.read_csv("../data/world_bank_dataset.csv")
+df = pd.read_csv("world_bank_dataset.csv")
+
 
 st.set_page_config(page_title="World Bank Dashboard", layout="wide")
 
@@ -75,3 +76,4 @@ fig3 = px.scatter(
 )
 
 st.plotly_chart(fig3, use_container_width=True)
+
