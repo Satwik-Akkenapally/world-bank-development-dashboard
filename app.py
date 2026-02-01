@@ -38,10 +38,10 @@ indicator_label = st.sidebar.selectbox(
 indicator = indicator_map[indicator_label]
 
 
-filtered_df = df[df["country"] == country]
+filtered_df = df[df["country"] == country].sort_values("year")
 
 # Line chart
-st.subheader(f"{indicator} over Time for {country}")
+st.subheader(f"{indicator_label} over Time for {country}")
 
 fig1 = px.line(
     filtered_df,
@@ -76,4 +76,5 @@ fig3 = px.scatter(
 )
 
 st.plotly_chart(fig3, use_container_width=True)
+
 
